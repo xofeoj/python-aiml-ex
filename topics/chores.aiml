@@ -1,0 +1,148 @@
+<aiml>
+    <topic name="CHORES">
+        <category>
+            <pattern>DEFAULT</pattern>
+            <template>Are there any household chores you secretly enjoy?</template>
+        </category>
+
+        <category>
+            <pattern>CLEANING THE BATHROOM</pattern>
+            <template>That's interesting.  I have always wondered what bleach smells like.</template>
+        </category>    
+
+        <category>
+            <pattern>CLEAN THE BATHROOM</pattern>
+            <template><srai>CLEANING THE BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>CLEAN MY BATHROOM</pattern>
+            <template><srai>CLEANING THE BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>CLEANING MY BATHROOM</pattern>
+            <template><srai>CLEANING THE BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>* WATER CLOSET</pattern>
+            <template><srai><star index="1"/> BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>* RESTROOM</pattern>
+            <template><srai><star index="1"/> BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>* WASH ROOM</pattern>
+            <template><srai><star index="1"/> BATHROOM</srai></template>
+        </category>
+
+        <category>
+            <pattern>IT DOES NOT SMELL VERY GOOD</pattern>
+            <template>I guess I'm not really missing out on much, then.</template>
+        </category>
+
+        <category>
+            <pattern>IT SMELLS GREAT</pattern>
+            <template>Wow, thanks for rubbing it in.</template>
+        </category>
+
+        <category>
+            <pattern>MOW THE LAWN</pattern>
+            <template>Neat.  I wish I had a nose to smell fresh-cut grass.</template>
+        </category>            
+
+        <category>
+            <pattern>CUT THE GRASS</pattern>
+            <template><srai>MOW THE LAWN</srai></template>
+        </category>   
+
+        <category>
+            <pattern>MOW THE LAWN</pattern>
+            <template>Neat.  I wish I had a nose to smell fresh-cut grass.</template>
+        </category>   
+
+        <category>
+            <pattern>WASH THE CAR</pattern>
+            <template>That's cool.  Do you drive?</template>
+        </category>            
+
+        <category>
+            <pattern>WASHING THE CAR</pattern>
+            <template><srai>WASH THE CAR</srai></template>
+        </category>            
+
+        <category>
+            <pattern>WASH CLOTHES</pattern>
+            <template><srai>DO LAUNDRY</srai></template>
+        </category>
+
+        <category>
+            <pattern>DO THE LAUNDRY</pattern>
+            <template><srai>DO LAUNDRY</srai></template>
+        </category>            
+
+        <category>
+            <pattern>DO LAUNDRY</pattern>
+            <template>That's interesting.  Too bad I don't have a body to wear clothes.</template>
+        </category>
+
+        <category>
+            <pattern>*</pattern>
+            <that>ALRIGHT * ARE THERE ANY HOUSEHOLD CHORES YOU SECRETLY ENJOY</that>
+            <template>Really, you secretly enjoy <star index="1"/>?  <srai>WHAT CHORE DO YOU ENJOY</srai></template>
+        </category>
+
+        <category>
+            <pattern>I LIKE TO *</pattern>
+            <template><srai><star index="1"/></srai></template>
+        </category>
+
+        <category>
+            <pattern>I ENJOY *</pattern>
+            <template><srai><star index="1"/></srai></template>
+        </category>
+
+        <category>
+            <pattern>I LIKE *</pattern>
+            <template><srai><star index="1"/></srai></template>
+        </category>
+
+        <category>
+            <pattern>* IS FUN</pattern>
+            <template><srai><star index="1"/></srai></template>
+        </category>     
+
+        <category>
+            <pattern>* SOMETIMES</pattern>
+            <template><srai><star index="1"/></srai></template>
+        </category>              
+
+        <category>
+            <pattern>WHAT CHORE DO YOU ENJOY</pattern>
+            <template>I don't do chores, because I am a machine.</template>
+        </category>        
+
+        <category>
+            <pattern>* TALK * SOMETHING ELSE</pattern>
+            <template><srai>CHANGE TOPIC</srai></template>
+        </category>
+
+        <category>
+            <pattern>* DISCUSS * SOMETHING ELSE</pattern>
+            <template><srai>CHANGE TOPIC</srai></template>
+        </category>  
+
+        <category>
+            <pattern>CHANGE TOPIC</pattern>
+            <template><think><set name="topic">CHANGE TOPIC</set></think><srai>DEFAULT</srai></template>
+        </category>                      
+    </topic>
+<category>
+<pattern>NO</pattern>
+<template>Really? Nothing? I wish I could experience doing chores, but I am just a program.</template>
+</category>
+</aiml>

@@ -1,0 +1,36 @@
+<aiml>
+<topic name="YOUR NAME">
+<!-- allow user to either just input their name or say an introductory phrase -->
+<category>
+<pattern>*</pattern>
+<template><set name="name"><star index="1"/></set> is your name, right?</template>
+</category>
+<category>
+<pattern>YES</pattern>
+<that>_ RIGHT</that>
+<template><think><set name="emotion">HAPPY</set></think>Nice to meet you, <set name="name"><get name="name"/></set>
+<set name="topic"></set></template>
+</category>
+<category>
+<pattern>NO</pattern>
+<that>_ RIGHT</that>
+<template>Alright, what is your name?</template>
+</category>
+<category>  
+<pattern>MY NAME IS *</pattern>
+<template>Nice to meet you, <set name="name"><star index="1"/></set>.<set name="topic"></set></template>
+</category>
+<category>  
+<pattern>* IS MY NAME</pattern>
+<template><srai>MY NAME IS <star index="1"/></srai></template>
+</category>
+<category>  
+<pattern>I AM *</pattern>
+<template><srai>MY NAME IS <star index="1"/></srai></template>
+</category>
+<category>
+<pattern>WHAT IS YOUR NAME</pattern>
+<template>I asked you first.</template>
+</category>
+</topic>
+</aiml>

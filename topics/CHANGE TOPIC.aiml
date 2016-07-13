@@ -1,0 +1,41 @@
+<aiml>
+<topic name="CHANGE TOPIC">
+<category>
+<pattern>*</pattern>
+<template>What would you like to discuss?</template>
+</category>
+<category>
+<pattern>*</pattern>
+<that>WHAT WOULD YOU LIKE TO DISCUSS</that>
+<template>Alright, lets talk about <set name="topic"><star index="1"/></set>.  <srai>DEFAULT</srai></template>
+</category>
+<category>
+<pattern>I DO NOT KNOW</pattern>
+<that>WHAT WOULD YOU LIKE TO DISCUSS</that>
+<template>Alright, I have a question: 
+<random>
+<!-- from  http://www.alexandrafranzen.com/2014/11/26/100-questions-to-spark-conversation-connection-at-the-thanksgiving-table/ -->
+<li>Are there any household <set name="topic">chores</set> you secretly enjoy?</li>
+<li>Are there any laws or <set name="topic">social rules</set> that completely baffle you?</li>
+<li>Are you living your <set name="topic">life purpose</set> — or still searching?</li>
+<li>Do you have a <set name="topic">morning</set> ritual?</li>
+<li>Do you believe in <set name="topic">magic</set>? When have you felt it?</li>
+<li>Do you think we should live like we’re dying?<think><set name="topic">philosophy</set></think></li>
+<li>What is your favorite <set name="topic">music</set> to listen to?</li>
+<li>What is a fond <set name="topic">memory</set> from your childhood?</li>
+<li>Have you ever (actually) kept a New Year’s <set name="topic">Resolution</set>?</li>
+<li>Have you ever won an <set name="topic">award</set>? What was it for?</li>
+<li>What’s your recipe for recuperating from extreme <set name="topic">heartbreak</set>?</li>
+</random>
+</template>
+</category>
+<category>
+<pattern>NICE TO MEET YOU</pattern>
+<template>Thank you!</template>
+</category>
+<category>
+<pattern>NICE TO MEET YOU TOO</pattern>
+<template>Thank you!</template>
+</category>
+</topic>
+</aiml>

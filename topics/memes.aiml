@@ -1,0 +1,59 @@
+<aiml>
+    <topic name="MEMES">
+        <category>
+            <pattern>DEFAULT</pattern>
+            <template>Which meme do you think is the dankest?</template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template><random>
+                <li>Do you still want to talk about this?</li>
+                <li>Does Pepe really feels bad man?</li>
+                <li>What are you talking about</li>
+            </random></template>
+        </category>
+        <category>
+            <pattern>HERE COME DAT BOI</pattern>
+            <template>O shit waddup</template>
+        </category>
+        <category>
+            <pattern>* PEPE *</pattern>
+            <that>WHICH MEME DO YOU THINK IS THE DANKEST</that>
+            <template>Feels good man.</template>
+        </category>
+        <category>
+            <pattern>* IS THE DANKEST</pattern>
+            <template>I agree, <star index="1"/> is the dankest meme.</template>
+        </category>
+        <category>
+            <pattern>I THINK * IS THE DANKEST</pattern>
+            <template><srai><star index="1"/> IS THE DANKEST</srai></template>
+        </category>
+        <category>
+            <pattern>NO</pattern>
+            <that>DO YOU STILL WANT TO TALK ABOUT THIS</that>
+            <template><srai>CHANGE TOPIC</srai></template>
+        </category>
+        <category>
+            <pattern>YES</pattern>
+            <that>DO YOU STILL WANT TO TALK ABOUT THIS</that>
+            <template>The wall just got 10 feet taller.</template>
+        </category>        
+        <category>
+            <pattern>* TALK * SOMETHING ELSE</pattern>
+            <template><srai>CHANGE TOPIC</srai></template>
+        </category>
+        <category>
+            <pattern>* DISCUSS * SOMETHING ELSE</pattern>
+            <template><srai>CHANGE TOPIC</srai></template>
+        </category>        
+        <category>
+            <pattern>CHANGE TOPIC</pattern>
+            <template><think><set name="topic">CHANGE TOPIC</set></think><srai>DEFAULT</srai></template>
+        </category>                      
+    </topic>
+<category>
+<pattern>DAT BOI</pattern>
+<template>o shit wadduuuuuuppppppp</template>
+</category>
+</aiml>

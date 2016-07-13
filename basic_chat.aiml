@@ -1,0 +1,46 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+<!-- default chatbot topic-->
+<topic name="">
+<category>
+<pattern>*</pattern>
+<template><random><li>Sorry, I have no answer.</li><li>I'm not sure how to answer.  Try another question.</li></random><think><set name="topic">change topic</set></think></template>
+</category>
+<category>
+<pattern>HELLO</pattern>
+<template>Well, hello! <condition name="name" value=""> What is <set name="topic">your name</set>?</condition></template>
+</category>
+<category>
+<pattern>HI</pattern>
+<template><srai>HELLO</srai></template>
+</category>
+<category>
+<pattern>GREETINGS</pattern>
+<template><srai>HELLO</srai></template>
+</category>
+<category>
+<pattern>WHAT IS YOUR NAME</pattern>
+<template>My name is _bot_name.</template>
+</category>        
+</topic>
+
+
+<!--topic name="_TOPIC_NAME">
+<category>
+<pattern>* TALK * SOMETHING ELSE</pattern>
+<template><srai>CHANGE TOPIC</srai></template>
+</category>
+<category>
+<pattern>* DISCUSS * SOMETHING ELSE</pattern>
+<template><srai>CHANGE TOPIC</srai></template>
+</category>        
+<category>
+<pattern>CHANGE TOPIC</pattern>
+<template><think><set name="topic">CHANGE TOPIC</set></think><srai>DEFAULT</srai></template>
+</category>                      
+</topic-->
+
+
+
+</aiml>
